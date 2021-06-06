@@ -4,10 +4,10 @@ one:
   band_name: MyString
   members: 1
   debut: 2021-06-06
-  type: 
+  status: 
 
 two:
   band_name: MyString
   members: 1
   debut: 2021-06-06
-  type: 
+  status: 
