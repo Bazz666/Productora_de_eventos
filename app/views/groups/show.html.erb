@@ -20,11 +20,27 @@
   <%= @group.status %>
 </p>
 
+<table>
+  <thead>
+    <tr>
+      <th>Total concerts |</th>
+      <th>Last concert |</th>
+      <th>Max Audience |</th>
+      <th>Max Duration</th>
+  
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+        
+    </tr>
+  </tbody>
+</table>
+
 
 <%= link_to 'Add_concert', new_concert_path(@concert) %> |
-<%= link_to 'Back', groups_path %>
-
-<br>
 
 <%= link_to 'Edit', edit_group_path(@group) %> |
-<%= link_to 'Back', groups_path %>
+
+<%= link_to 'Back to Groups', groups_path %>|

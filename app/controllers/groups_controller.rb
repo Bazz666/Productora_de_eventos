@@ -4,12 +4,13 @@ class GroupsController < ApplicationController
   # GET /groups or /groups.json
   def index
     @groups = Group.all
-    @groups= Group.pluck :band_name, :id 
+    @concerts = Concert.all
   end
 
   # GET /groups/1 or /groups/1.json
   def show
-    @groups= Group.pluck :band_name, :id 
+    @groups = Group.all
+    @concerts = Concert.all
   end
 
   # GET /groups/new
@@ -19,7 +20,8 @@ class GroupsController < ApplicationController
 
   # GET /groups/1/edit
   def edit
-    @groups= Group.pluck :band_name, :id 
+    @groups = Group.all
+    @concerts = Concert.all
   end
 
   # POST /groups or /groups.json

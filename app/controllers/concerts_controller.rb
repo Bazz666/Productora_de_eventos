@@ -4,7 +4,7 @@ class ConcertsController < ApplicationController
   # GET /concerts or /concerts.json
   def index
     @concerts = Concert.all
-    @groups= Group.pluck :band_name
+    @groups= Group.pluck :band_name, :id 
    
   end
 
@@ -17,15 +17,18 @@ class ConcertsController < ApplicationController
   # GET /concerts/new
   def new
     @concert = Concert.new
+    @groups = Group.all 
     @groups= Group.pluck :band_name, :id 
   end
 
   # GET /concerts/1/edit
   def edit
+    @groups = Group.all 
   end
 
   # POST /concerts or /concerts.json
   def create
+    @groups = Group.all 
     @concert = Concert.new(concert_params)
 
     respond_to do |format|
