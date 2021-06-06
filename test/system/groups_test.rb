@@ -17,7 +17,7 @@ class GroupsTest < ApplicationSystemTestCase
     fill_in "Band name", with: @group.band_name
     fill_in "Debut", with: @group.debut
     fill_in "Members", with: @group.members
-    fill_in "Type", with: @group.type
+    fill_in "Type", with: @group.status
     click_on "Create Group"
 
     assert_text "Group was successfully created"
@@ -31,7 +31,7 @@ class GroupsTest < ApplicationSystemTestCase
     fill_in "Band name", with: @group.band_name
     fill_in "Debut", with: @group.debut
     fill_in "Members", with: @group.members
-    fill_in "Type", with: @group.type
+    fill_in "Type", with: @group.status
     click_on "Update Group"
 
     assert_text "Group was successfully updated"

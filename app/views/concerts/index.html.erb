@@ -5,10 +5,10 @@
 <table>
   <thead>
     <tr>
+      <th>Group</th>
       <th>Audience</th>
       <th>Duration</th>
       <th>Concert date</th>
-      <th>Group</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +16,10 @@
   <tbody>
     <% @concerts.each do |concert| %>
       <tr>
+        <td><%= concert.group_id %></td>
         <td><%= concert.audience %></td>
         <td><%= concert.duration %></td>
         <td><%= concert.concert_date %></td>
-        <td><%= concert.group %></td>
         <td><%= link_to 'Show', concert %></td>
         <td><%= link_to 'Edit', edit_concert_path(concert) %></td>
         <td><%= link_to 'Destroy', concert, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -31,3 +31,4 @@
 <br>
 
 <%= link_to 'New Concert', new_concert_path %>
+<%= link_to 'back to bands', groups_path %>

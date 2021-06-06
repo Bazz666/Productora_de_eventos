@@ -4,15 +4,20 @@ class ConcertsController < ApplicationController
   # GET /concerts or /concerts.json
   def index
     @concerts = Concert.all
+    @groups= Group.pluck :band_name
+   
   end
 
   # GET /concerts/1 or /concerts/1.json
   def show
+    @groups=Group.all
+    @groups= Group.pluck :band_name, :id 
   end
 
   # GET /concerts/new
   def new
     @concert = Concert.new
+    @groups= Group.pluck :band_name, :id 
   end
 
   # GET /concerts/1/edit
