@@ -11,6 +11,13 @@
     </div>
   <% end %>
 
+
+  <div class="field">
+    <%= form.label :group_id %>
+    <%= form.select :group_id, options_for_select(@groups), prompt: "select a group" %>
+  </div>
+
+
   <div class="field">
     <%= form.label :audience %>
     <%= form.number_field :audience %>
@@ -24,11 +31,6 @@
   <div class="field">
     <%= form.label :concert_date %>
     <%= form.date_select :concert_date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :group_id %>
-    <%= form.text_field :group_id %>
   </div>
 
   <div class="actions">

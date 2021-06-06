@@ -27,8 +27,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :type %>
-    <%= form.text_field :type %>
+    <%= form.label :status %>
+    <%= form.select :status, Post.statuses.keys %>
   </div>
 
   <div class="actions">
